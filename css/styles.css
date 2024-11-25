@@ -1,0 +1,123 @@
+:root{
+    /*Colores*/
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --DarkBlue: hsl(212, 21%, 14%);
+    --GrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /*Fuentes*/
+    --Fraunces: "Fraunces", serif;
+    --Montserrat: "Montserrat", sans-serif;
+
+}
+/*Hacks*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+main{
+    font-size: 1.4rem;
+    font-family: var(--Montserrat);
+    height: 100vh;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imagen{
+    width: 90%;
+    height: 30%;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem 1rem 0 0;
+}
+.contenido{
+    width: 90%;
+    background-color: var(--white);
+    border-radius: 0 0  1rem 1rem;
+    padding: 1.5rem;
+}
+.contenido .categoria{
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: var(--GrayishBlue);
+}
+.contenido h1{
+    font-family: var(--Fraunces);
+    font-size: 3rem;
+}
+.contenido .texto{
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+.contenido .precio{
+    color: var(--DarkCyan);
+    font-weight: bold;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: var(--Fraunces);
+    margin: 1rem 0 1.8rem 0;
+}
+.contenido .precio span{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: var(--DarkBlue);
+    text-decoration-line: line-through;
+    font-family: var(--Montserrat);
+}
+.contenido button{
+    color: var(--white);
+    background-color: var(--DarkCyan);
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+}
+.contenido button span{
+    padding: 1.5rem;
+    background-image: url(/images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media (min-width: 1440px) {
+    main{
+        flex-direction: row;
+        width: 40vw;
+        height: 60vh;
+    }
+    .imagen{
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+        background-image: url(/images/image-product-desktop.jpg);
+    }
+    .contenido{
+        height: 100%;
+        border-radius: 0 1rem 1rem 0;
+    }
+    .contenido h1{
+        font-size: 3.8rem;
+        line-height: .8;
+    }
+}
